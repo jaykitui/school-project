@@ -1,0 +1,795 @@
+/* normalizing our web page */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+/* here we tried making our page responsive
+ using css media queries */
+@media screen and ( max-width : 823px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+  }
+  .container{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .child1{
+    width: 100%;
+    text-align: center;
+  }
+  .child2{
+    width: 100%;
+    text-align: center;
+  }
+  .child2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+   .flex-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+   }
+   .flex-items{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+   }
+   .flex-items button{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: hsl(205, 84%, 52%);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transform: translateX(-50px);
+
+   }
+   
+   .flex-items img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;}
+}
+/* Making our navigation links responsive */
+@media  screen and ( max-width: 605px) {
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+  }
+}
+/* here we applied media queries to our footer to make them responsive */
+@media screen and ( max-width: 823px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+    font-size: 13px;
+  }
+}
+/* making swiper slider responsive */
+@media screen and ( max-width: 823px) {
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 10px;
+  }
+}
+/* here we applied css media queries styles to our grid-section */
+@media screen and ( max-width : 678px) {
+  .grid-columns .card {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: 0px;
+    border-radius: 10px;
+  }
+}
+/* 
+here we applied flexbox css style to 
+display our content in a column form */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+    /* left: 0;
+    right: 0; */
+  z-index: 100;
+   left: 0;
+  right: 0;
+
+  background-color: hsl(266, 62%, 11%);
+  font-family:  "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/*
+here we applied flexbox css style to
+display our sub-content of the nav in a column form */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* our navigation bar styles */
+#btn {
+  padding: 20px;
+  border-radius: 20px;
+  width: 150px;
+  text-align: center;
+  border: none;
+  background-color: hsl(205, 84%, 52%);
+}
+
+/* here we added hover effect to our button and a for our nav links
+*/
+nav ul li a:hover {
+  color: hsl(205, 84%, 52%);
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-color: whitesmoke;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+#btn:hover {
+  background-color: hsl(205, 84%, 52%);
+  color: hsl(266, 62%, 11%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: scale(1.1);
+  border: none;
+  font-weight: 700;
+  color: white;
+}
+
+/* 
+---> our body styling begins here 
+---> we used some custom styles
+---> to make our body look good
+--> we imported some pre-made components from open source libraries
+--> like font awesome and google fonts and ui-verse components   */
+::root {
+  /* --main-bg-color: hsl(266, 62%, 11%); */
+  --secondary-color: hsl(205, 84%, 52%);
+  --main-text-color: hsl(0, 0%, 100%);
+  --main-font-family: "Poppins", sans-serif;
+  --main-font-size: 16px;
+  --main-font-weight: 400;
+  --lg-font-size: 20px;
+  --lg-font-weight: 600;
+  --xl-font-size: 24px;
+  --xl-font-weight: 700;
+  --xxl-font-size: 32px;
+  --xxl-font-weight: 800;
+  --p-font-size: 14px;
+  --p-font-weight: 400;
+  --h1-font-size: 50px;
+  --h1-font-weight: bolder;
+}
+
+/* here we applied some css flexbox styles to our main content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex-wrap: wrap;
+  background-color: hsl(265, 63%, 7%);
+}
+
+/* styles to style our hero text */
+.child1 {
+  width: 50%;
+  background-color: transparent;
+  padding: 20px;
+}
+
+.child1 h1 {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: var(--h1-font-weight);
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+}
+
+.child1 p {
+  font-size: var(--p-font-size);
+  font-weight: var(--p-font-weight);
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+}
+
+#btn1 {
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  color: white;
+  background-color: hsl(205, 84%, 52%);
+  width: 150px;
+  cursor: pointer;
+}
+
+/* here we added hover effect to our button */
+#btn1:hover {
+  background-color: hsl(205, 84%, 52%);
+  color: hsl(266, 62%, 11%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: scale(1.1);
+  border: none;
+  font-weight: 700;
+}
+
+/* styling of our image in the hero section */
+.child2 {
+  width: 50%;
+  /* background-color: blue; */
+  border-radius: 20px;
+  height: 100%;
+}
+
+.child2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* here we added styles to our sliders to display companies we have worked with */
+.text-center {
+  text-align: center;
+  background-color: hsl(205, 84%, 52%);
+  color: rgb(1, 0, 0);
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+section.parent {
+  background-color: orangered !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-side img {
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/**
+here we applied css flexbox properties to our main content
+*/
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex-wrap: wrap;
+  /* background-color: hsl(265, 58%, 45%); */
+  background-color: hsl(265, 63%, 7%);
+  min-height: 400px;
+  /* flex-wrap: wrap; */
+}
+
+.flex-items {
+  width: 50%;
+  background-color: transparent;
+  padding: 20px;
+  /* height: 500px; */
+  padding: 20px;
+  flex-wrap: nowrap;
+}
+
+.flex-items img {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  /* object-fit: cover; */
+}
+
+/* h1 styling */
+.flex-items h1 {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+  color: green;
+}
+
+.flex-items p::first-letter {
+  color: purple;
+  font-size: 2rem;
+  font-style: italic;
+  padding-inline-end: 3px;
+}
+
+/* h2 styling */
+.flex-items h2 {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+  font-style: italic;
+  color: purple;
+}
+
+.flex-items p {
+  font-size: var(--p-font-size);
+  font-weight: var(--p-font-weight);
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+}
+
+.flex-items a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+}
+
+.flex-items button {
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  border: none;
+  color: white;
+  background-color: hsl(205, 84%, 52%);
+  width: 300px;
+  cursor: pointer;
+  margin-left: 80px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* here we added hover effect to our button */
+.flex-items button:hover {
+  background-color: hsl(205, 84%, 52%);
+  color: hsl(266, 62%, 11%);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: scale(1.1);
+  border: none;
+  font-weight: 700;
+}
+
+/*
+Here we applied css grid properties to our main content
+to map our cards in a grid form
+*/
+.grid-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: hsl(265, 63%, 7%);
+}
+
+.text {
+  text-align: center;
+  background-color: hsl(265, 63%, 7%);
+  padding: 20px;
+  color: aliceblue;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+    border-radius: 10px;
+}
+
+.text span {
+  color: red;
+  text-decoration: dotted underline;
+  text-decoration-color: red;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+/* here we added styles to our cards */
+
+.card {
+  width: 17em;
+  height: 22.5em;
+  background: hsl(245, 36%, 14%);
+  transition: 1s ease-in-out;
+  clip-path: polygon(
+    30px 0%,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0% 30px
+  );
+   border-top-right-radius: 20px; 
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  -20px -20px 25px #bebebe,
+             20px 20px 25px #ffffff; */
+}
+
+.card span {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: rgb(17, 139, 36);
+  text-align: center;
+  display: block;
+  
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+  object-fit: cover;
+  object-position: 1;
+  
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 1;
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+
+  font-weight: bold;
+  background: hsl(205, 84%, 52%);
+  color: rgb(0, 0, 0);
+  transition: 0.4s ease-in-out;
+}
+
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+.card2 {
+  background-color: hsl(244, 49%, 45%) !important;
+}
+/* our grid system ended from this point */
+/*We styled our footer using css flex-box css styles */
+footer {
+  display: flex;
+  min-height: 100px; ;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* border-top-left-radius: 20px; */
+  flex-wrap: wrap;
+  background-color: hsl(242, 95%, 16%);
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+    font-size: 18px;
+}
+/* /* here we applied flexbox css style to */
+footer ul {
+   
+    list-style:none;
+    gap: 20px;
+}
+::marker{
+    color: black;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px; ;
+}
+.root{
+    text-align: left;
+}
+.root h3{
+    color: red;
+    text-decoration: dotted underline;
+    text-decoration-color:whitesmoke;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    font-style: italic;
+}
+.footer{
+    background-color: hsl(242, 95%, 16%);
+   border: none;
+   font-size: 15px;
+   
+  
+}
+.footer p{
+    color: black;
+}
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+.root a:hover {
+    color: hsl(0, 91%, 46%) !important;
+    text-decoration: none;
+
+}
+/* custom styles for button imported from ui-verse */
+/* custom animation from ui-library */ 
+.input-group {
+    display: flex;
+    align-items: center;
+    height: 50px ;
+    padding-top: 20px;
+    margin-left: 0px ;
+  }
+  
+  .input {
+    height: 50px;
+    max-width: 150px;
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #5e4dcd;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+  }
+  
+  .button--submit {
+    height: 50px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color:hsl(267, 67%, 24%);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .button--submit:hover {
+    background-color: #5e5dcd;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+  }
+  ::placeholder{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-style: italic;
+    text-decoration: none;
+  }
+  
+/* custom animation from ui-verse library*/ 
+.btn {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    position: relative;
+    background-color: transparent;
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0.6;
+  }
+  
+  .btn::after {
+    content: '';
+    border-bottom: 3px double rgb(214, 207, 113);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    margin-top: -5px;
+    top: 0;
+    left: 5px;
+    visibility: hidden;
+    opacity: 1;
+    transition: .2s linear;
+  }
+  
+  .btn .icon {
+    transform: translateX(0%);
+    transition: .2s linear;
+    animation: attention 1.2s linear infinite;
+  }
+  
+  .btn:hover::after {
+    visibility: visible;
+    opacity: 0.7;
+    width: 90%;
+  }
+  
+  .btn:hover {
+    letter-spacing: 2px;
+    opacity: 1;
+  }
+  
+  .btn:hover > .icon {
+    transform: translateX(30%);
+    animation: none;
+  }
+  
+  @keyframes attention {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    50% {
+      transform: translateX(30%);
+    }
+  }
+  
+  /* We Imported  custom social media links from ui-verse here */ 
+.social-card {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgb(83, 10, 10);
+    padding: 20px 25px;
+    border-radius: 14px;
+  }
+  .Btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+    z-index: 2;
+  }
+  
+  .BG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+    font-size: 0px;
+  }
+  .github .BG {
+    background: #181818;
+  }
+  .linkdin .BG {
+    background: #0077b5;
+  }
+  .whatsapp .BG {
+    background: #075e54;
+  }
+  .discord .BG {
+    background: #7289da;
+  }
+  .Btn:hover .BG {
+    transform: scale(1.5);
+    /* transform-origin: bottom; */
+    font-size: 20px;
+    color: white;
+  }
+  
+  .Btn:hover .svgContainer {
+    border: 1px solid rgba(216, 216, 216, 0.466);
+    background-color: rgba(209, 209, 209, 0.466);
+    backdrop-filter: blur(4px);
+  }
+  
+
+
+
+
+
+  
